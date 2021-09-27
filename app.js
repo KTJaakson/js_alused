@@ -1,31 +1,26 @@
-const name = "Karl Tauno";
-const age = 21;
-const job = "Kutse6pilane";
-const city = "Tartu";
+let val;
+const today = new item Date();
 
-let html;
+val = today.getMonth(); 
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliSeconds();
+val = today.getTime();
 
-// es5
+let birthday = new.Date('9-27-2001 11:00:00');
+birthday = new.Date('September 27 2001');
 
-html = '<ul>' +
-			'<li>' + name + '</li>' +
-			'<li>' + age + '</li>' +
-			'<li>' + job + '</li>' +
-			'<li>' + city + '</li>' +
-		'</ul>';
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(2002);
+birthday.setHours(11);
+birthday.setMinutes(22);
+birthday.setSeconds(50);
 
 
-// es6 - template string
-
-html = `
-	<ul>
-		<li>Name: ${name}</li>
-		<li>Age: ${age}</li>
-		<li>Job: ${job}</li>
-		<li>City: ${city}</li>
-	</ul>
-`;
-
-console.log(html);
-
-document.body.innerHTML = html;
+console.log(today);
+console.log(val);
