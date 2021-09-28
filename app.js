@@ -4,49 +4,72 @@ if(tingimus) {
 } else {
 	// tegevused else puhul
 }
-
-
-const testid = 100;
-
-if(testid == 100){
-	console.log('Õige')
-} else {
-	console.log('Vale')
-}
-
 */
 
+const id = 100;
+
+// == - võrdub
+// != - ei võrdu
+// === - võrdub ja tüübikontroll
+// !== - ei võrdu ja tüübikontroll
+
+// kui undefined
 /*
-let val;
-const today = new item Date();
-
-val = today.getMonth(); 
-val = today.getDate();
-val = today.getDay();
-val = today.getFullYear();
-val = today.getHours();
-val = today.getMinutes();
-val = today.getSeconds();
-val = today.getMilliSeconds();
-val = today.getTime();
+let testId;
+if(typeof testId !== 'undefined'){
+	console.log(`id on ${testId}`);
+} else {
+	console.log('id puudub');
+}
 */
 
-const today = new Date.getDay();
+// > ja <
+/*
+if(id > 100) {
+	console.log(`id on ${id} - suurem kui 100`);
+} else {
+	console.log(`id on ${id} - väiksem või võrdne 100`);
+}
+*/
 
-switch (today) {
-	case 0;
-		console.log('Pühapäev')
-	case 1;
-		console.log('Esmaspäev')
-	case 2;
-		console.log('Teisipäev')
-	case 3;
-		console.log('Kolmapäev')
-	case 4;
-		console.log('Neljapäev')
-	case 5;
-		console.log('Reede')
-	case 6;
-		console.log('Laupäev')
+// if - else if - else
+/*
+const color = "blue";
+if(color === 'red'){
+	console.log('Stop!');
+} else if(color === 'yellow'){
+	console.log('Attention!');
+} else if(color === 'green'){
+	console.log('Go!');
+} else {
+	console.log('Color is not accepted!');
+}
+*/
+
+// and - &&
+const name = 'Kadi';
+const age = 70;
+
+if(age > 0 && age <= 12){
+	console.log(`${name} on laps`);
+} else if(age > 12 && age < 18){
+	console.log(`${name} on nooruk`);
+} else {
+	console.log(`${name} on täiskasvanu`);
 }
 
+// or - ||
+if(age < 18 || age > 65){
+	console.log(`${name} ei saa registreerida`);
+} else {
+	console.log(`${name} on registreeritud`);
+}
+
+// ? - ternary operaator
+console.log(id === 100 ? 'Õige' : 'Vale');
+
+// ilma {}
+if(id === 100) 
+	console.log('Korras');
+else 
+	console.log('Ei ole korras');
