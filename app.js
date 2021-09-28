@@ -1,75 +1,70 @@
-/*
-if(tingimus) {
-	// tegevused if puhul
-} else {
-	// tegevused else puhul
-}
-*/
+// for tsükkel
 
-const id = 100;
+console.log('for tsükkel');
+for (let i = 0; i < 10; i++) {
+	if(i == 5){
+		continue;
+	}
+	console.log(i)
+};
 
-// == - võrdub
-// != - ei võrdu
-// === - võrdub ja tüübikontroll
-// !== - ei võrdu ja tüübikontroll
+// while tsükkel
 
-// kui undefined
-/*
-let testId;
-if(typeof testId !== 'undefined'){
-	console.log(`id on ${testId}`);
-} else {
-	console.log('id puudub');
-}
-*/
+console.log('while tsükkel');
 
-// > ja <
-/*
-if(id > 100) {
-	console.log(`id on ${id} - suurem kui 100`);
-} else {
-	console.log(`id on ${id} - väiksem või võrdne 100`);
-}
-*/
-
-// if - else if - else
-/*
-const color = "blue";
-if(color === 'red'){
-	console.log('Stop!');
-} else if(color === 'yellow'){
-	console.log('Attention!');
-} else if(color === 'green'){
-	console.log('Go!');
-} else {
-	console.log('Color is not accepted!');
-}
-*/
-
-// and - &&
-const name = 'Kadi';
-const age = 70;
-
-if(age > 0 && age <= 12){
-	console.log(`${name} on laps`);
-} else if(age > 12 && age < 18){
-	console.log(`${name} on nooruk`);
-} else {
-	console.log(`${name} on täiskasvanu`);
+let i = 0;
+while(i < 10){
+	console.log(i);
+	i++;
 }
 
-// or - ||
-if(age < 18 || age > 65){
-	console.log(`${name} ei saa registreerida`);
-} else {
-	console.log(`${name} on registreeritud`);
+// do while
+
+
+console.log('do while tsükkel');
+
+let j = 0;
+do {
+	console.log(j);
+	j++;
+} while(j < 10);
+
+
+// tsüklid ja massiivid
+
+console.log('massiivid ja tsüklid')
+const cars = ['Ford', 'Honda', 'Toyota'];
+
+// for tsükliga
+for(let i = 0; i < cars.length; i++) {
+	console.log(cars[i]);
 }
 
-// ? - ternary operaator
-console.log(id === 100 ? 'Õige' : 'Vale');
+console.log();
 
-// ilma {}
-if(id === 100) 
-	console.log('Korras');
-else 
-	console.log('Ei ole korras');
+//forEach - callback function
+
+cars.forEach(function(element, index, array){
+	console.log(`cars[${index}] = ${element}`);
+	console.log(array);
+
+});
+
+// forEach - arrow function
+cars.forEach((element, index) => {
+	console.log(`cars[${index}] = ${element}`);
+});
+
+// tsüklid ja objektid
+
+const person = {
+	firstname: 'Kadi',
+	surname: 'Tamm',
+	age: 25
+}
+
+// for in tsükkel
+for(let key in person){
+	console.log(`${key} = ${person[key]}`)
+}
+
