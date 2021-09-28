@@ -1,41 +1,46 @@
-// funktsiooni defineerimine (deklareemine)
-function greeting(firstname, lastname){
-	return 'Tere, ' + firstname + ' ' + lastname;
-}
-//funktsioonide kutsumine tööle
+let val;
 
-let greet = greeting('Karl', 'Jaakson');
-console.log(greet);
+val = document;
+val = document.all;
+val = document.all[5];
+val = document.all.length;
+
+val = document.head;
+val = document.body;
+
+val = document.doctype;
+
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
+
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].method;
+val = document.forms[0].action;
+val = document.forms[0].id;
+
+val = document.links;
+val = document.links[0];
+val = document.links[0].className;
+val = document.links[0].classList;
+val = document.links[0].classList[1];
+
+val = document.scripts;
+val = document.scripts[0];
+val = document.scripts[1];
+val = document.scripts[1].getAttributes('src');
+
+val = document.scripts;
+val = document.getElementByIn('task-title');
+val = document.getElementByIn('task-title').id;
+val = document.getElementByIn('task-title').className;
+
+const taskTitle = document.getElementByIn('task-title');
+taskTitle.style.bakground = '#333';
+taskTitle.style.color = '#FFF';
+taskTitle.style.padding = '5px';
 
 
-
-
-console.log();
-//funktsioon avaldamise kujul
-const square = function(number = 3){
-	return number * number;
-}
-console.log(square());
-
-//
-(function(){
-
-}
-
-//objekti see defineeritud funktsioonid
-console.log();
-const todo = {
-	add: function(){
-		console.log('add todo ...');
-	}
-	edit: function(id){
-		console.log(`edit todo nr ${id} ...`);
-	}
-	delete: function(){
-		console.log('delete todo ...');
-	}
-}
-
-todo.add();
-todo.edit(5);
-todo.delete();
+console.log(val);
