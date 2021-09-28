@@ -1,3 +1,22 @@
+/*
+if(tingimus) {
+	// tegevused if puhul
+} else {
+	// tegevused else puhul
+}
+
+
+const testid = 100;
+
+if(testid == 100){
+	console.log('Õige')
+} else {
+	console.log('Vale')
+}
+
+*/
+
+/*
 let val;
 const today = new item Date();
 
@@ -10,17 +29,24 @@ val = today.getMinutes();
 val = today.getSeconds();
 val = today.getMilliSeconds();
 val = today.getTime();
+*/
 
-let birthday = new.Date('9-27-2001 11:00:00');
-birthday = new.Date('September 27 2001');
+const today = new Date.getDay();
 
-birthday.setMonth(2);
-birthday.setDate(12);
-birthday.setFullYear(2002);
-birthday.setHours(11);
-birthday.setMinutes(22);
-birthday.setSeconds(50);
+switch (today) {
+	case 0;
+		console.log('Pühapäev')
+	case 1;
+		console.log('Esmaspäev')
+	case 2;
+		console.log('Teisipäev')
+	case 3;
+		console.log('Kolmapäev')
+	case 4;
+		console.log('Neljapäev')
+	case 5;
+		console.log('Reede')
+	case 6;
+		console.log('Laupäev')
+}
 
-
-console.log(today);
-console.log(val);
