@@ -1,46 +1,17 @@
 let val;
 
-val = document;
-val = document.all;
-val = document.all[5];
-val = document.all.length;
+val = document.querySelectorAll('li');
 
-val = document.head;
-val = document.body;
+const oddLi = document.querySelectorAll('li:nth-child(odd)');
 
-val = document.doctype;
+const evenLi = document.querySelectorAll('li:nth-child(even)');
 
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+oddLi.forEach(function(li){
+	li.style.background = '#ddd';
+});
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].method;
-val = document.forms[0].action;
-val = document.forms[0].id;
-
-val = document.links;
-val = document.links[0];
-val = document.links[0].className;
-val = document.links[0].classList;
-val = document.links[0].classList[1];
-
-val = document.scripts;
-val = document.scripts[0];
-val = document.scripts[1];
-val = document.scripts[1].getAttributes('src');
-
-val = document.scripts;
-val = document.getElementByIn('task-title');
-val = document.getElementByIn('task-title').id;
-val = document.getElementByIn('task-title').className;
-
-const taskTitle = document.getElementByIn('task-title');
-taskTitle.style.bakground = '#333';
-taskTitle.style.color = '#FFF';
-taskTitle.style.padding = '5px';
+for(let i = 0; i = evenLi.length; i++){
+	evenLi[i].style.background = '#f4f4f4';
+}
 
 
-console.log(val);
